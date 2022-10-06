@@ -10,11 +10,9 @@ class LabDataReader(DataReader):
         self.students: DataType = {}
 
     def read(self, path: str) -> DataType:
-        mydoc = ET.parse(path)
-
-        root = mydoc.getroot()
-
-        for child in root:
+        file = ET.parse(path)
+        line = file.getroot()
+        for child in line:
             self.key = child.attrib["name"]
             self.students[self.key] = []
             for i in range(len(child)):
