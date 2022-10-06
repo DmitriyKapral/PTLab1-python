@@ -4,6 +4,8 @@ import sys
 
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
+from LabDataReader import LabDataReader
+
 
 
 def get_path_from_arguments(args) -> str:
@@ -17,7 +19,7 @@ def get_path_from_arguments(args) -> str:
 def main():
     path = get_path_from_arguments(sys.argv[1:])
 
-    reader = TextDataReader()
+    reader = LabDataReader()
     students = reader.read(path)
     print("Students: ", students)
 
