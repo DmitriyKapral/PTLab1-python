@@ -8,7 +8,7 @@ RatingType = dict[str, float]
 class CalcLabRating:
 
     def __init__(self, data: DataType) -> None:
-        self.data: RatingType = data
+        self.data: DataType = data
         self.rating: RatingType = {}
 
     def calc(self) -> RatingType:
